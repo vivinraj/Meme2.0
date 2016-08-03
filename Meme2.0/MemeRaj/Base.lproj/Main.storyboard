@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeRaj" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5Z-A4-GKF">
+                                <rect key="frame" x="0.0" y="561" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Pick" id="PKM-y7-bZW">
+                                        <connections>
+                                            <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="LPk-iz-LbT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hWA-IN-hWh"/>
+                                    <barButtonItem style="plain" systemItem="camera" id="HY4-TS-SIR">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="p80-Hw-kRx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VLf-3A-JI3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="561"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z65-GG-CqW">
+                                <rect key="frame" x="268" y="511" width="63" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mir-Xp-ws2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem enabled="NO" systemItem="action" id="zYb-HQ-oCW">
+                                        <connections>
+                                            <action selector="shareButton:" destination="BYZ-38-t0r" id="gwe-9l-yaR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lWX-B8-xki">
+                                <rect key="frame" x="284" y="72" width="32" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G5Z-A4-GKF" firstAttribute="top" secondItem="VLf-3A-JI3" secondAttribute="bottom" id="49R-Jb-R9O"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="G5Z-A4-GKF" secondAttribute="bottom" constant="-5" id="99P-Ht-tkL"/>
+                            <constraint firstItem="lWX-B8-xki" firstAttribute="top" secondItem="Mir-Xp-ws2" secondAttribute="bottom" constant="28" id="Fmq-T7-miu"/>
+                            <constraint firstItem="G5Z-A4-GKF" firstAttribute="top" secondItem="VLf-3A-JI3" secondAttribute="bottom" id="Hn7-py-hdU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VLf-3A-JI3" secondAttribute="trailing" constant="-20" id="IDE-v5-DeN"/>
+                            <constraint firstItem="VLf-3A-JI3" firstAttribute="top" secondItem="Mir-Xp-ws2" secondAttribute="bottom" constant="-44" id="IRU-9s-mZK"/>
+                            <constraint firstItem="lWX-B8-xki" firstAttribute="centerX" secondItem="VLf-3A-JI3" secondAttribute="centerX" id="Lif-ME-zzM"/>
+                            <constraint firstItem="VLf-3A-JI3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NLr-JL-dMs"/>
+                            <constraint firstItem="VLf-3A-JI3" firstAttribute="top" secondItem="lWX-B8-xki" secondAttribute="bottom" constant="-84" id="O2M-TO-gS7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mir-Xp-ws2" secondAttribute="trailing" constant="-20" id="OSM-n3-NiF"/>
+                            <constraint firstItem="G5Z-A4-GKF" firstAttribute="top" secondItem="Z65-GG-CqW" secondAttribute="bottom" constant="33" id="Pki-Yp-uhJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G5Z-A4-GKF" secondAttribute="trailing" constant="-20" id="QYJ-2d-CuZ"/>
+                            <constraint firstItem="VLf-3A-JI3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Y6I-yc-pFp"/>
+                            <constraint firstItem="G5Z-A4-GKF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ckk-lj-y6d"/>
+                            <constraint firstItem="VLf-3A-JI3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="dhL-xr-xVI"/>
+                            <constraint firstItem="G5Z-A4-GKF" firstAttribute="top" secondItem="VLf-3A-JI3" secondAttribute="bottom" constant="5" id="ilJ-6T-w0U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VLf-3A-JI3" secondAttribute="trailing" constant="-20" id="qgl-ro-nAP"/>
+                            <constraint firstItem="VLf-3A-JI3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="r9d-ox-aej"/>
+                            <constraint firstItem="Mir-Xp-ws2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vF9-f6-UeZ"/>
+                            <constraint firstItem="Z65-GG-CqW" firstAttribute="centerX" secondItem="G5Z-A4-GKF" secondAttribute="centerX" id="vWh-mF-q8w"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NLr-JL-dMs"/>
+                                <exclude reference="O2M-TO-gS7"/>
+                                <exclude reference="49R-Jb-R9O"/>
+                                <exclude reference="ilJ-6T-w0U"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLabel" destination="Z65-GG-CqW" id="gTN-wm-Sd7"/>
+                        <outlet property="bottomToolbar" destination="G5Z-A4-GKF" id="kQC-WX-P92"/>
+                        <outlet property="cameraButton" destination="HY4-TS-SIR" id="azq-9N-agH"/>
+                        <outlet property="imagePickerView" destination="VLf-3A-JI3" id="ch4-Zx-n9x"/>
+                        <outlet property="shareButton" destination="zYb-HQ-oCW" id="owE-cm-6pE"/>
+                        <outlet property="topLabel" destination="lWX-B8-xki" id="zuF-EN-YKC"/>
+                        <outlet property="topToolbar" destination="Mir-Xp-ws2" id="lTI-2P-dcH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="314"/>
+        </scene>
+    </scenes>
+</document>
