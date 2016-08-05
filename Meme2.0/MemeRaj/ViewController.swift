@@ -99,6 +99,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let appDelegate = object as! AppDelegate
         
         appDelegate.memes.append(meme)
+        print("Meme added to the list of saved memes: \(appDelegate.memes.count)")
+        
         
         
         //(UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
@@ -195,6 +197,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         nextController.completionWithItemsHandler = {activity, completed, items, error in
             if completed {
                 self.save()
+                print("Meme saved")
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
 

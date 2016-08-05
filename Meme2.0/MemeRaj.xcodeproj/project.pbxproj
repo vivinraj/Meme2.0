@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370E13541D5446530057B082 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E13531D5446530057B082 /* CollectionViewController.swift */; };
+		370E13561D5446960057B082 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E13551D5446960057B082 /* CollectionViewCell.swift */; };
+		370E13581D5450CF0057B082 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E13571D5450CF0057B082 /* tableViewController.swift */; };
 		3714C7D91D18E9780019AE49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714C7D81D18E9780019AE49 /* AppDelegate.swift */; };
 		3714C7DB1D18E9780019AE49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714C7DA1D18E9780019AE49 /* ViewController.swift */; };
 		3714C7DE1D18E9780019AE49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3714C7DC1D18E9780019AE49 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370E13531D5446530057B082 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		370E13551D5446960057B082 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		370E13571D5450CF0057B082 /* tableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
 		3714C7D51D18E9780019AE49 /* MemeRaj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeRaj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3714C7D81D18E9780019AE49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3714C7DA1D18E9780019AE49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 				3714C7DF1D18E9780019AE49 /* Assets.xcassets */,
 				3714C7E11D18E9780019AE49 /* LaunchScreen.storyboard */,
 				3714C7E41D18E9780019AE49 /* Info.plist */,
+				370E13531D5446530057B082 /* CollectionViewController.swift */,
+				370E13551D5446960057B082 /* CollectionViewCell.swift */,
+				370E13571D5450CF0057B082 /* tableViewController.swift */,
 			);
 			path = MemeRaj;
 			sourceTree = "<group>";
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370E13541D5446530057B082 /* CollectionViewController.swift in Sources */,
 				3714C7DB1D18E9780019AE49 /* ViewController.swift in Sources */,
+				370E13561D5446960057B082 /* CollectionViewCell.swift in Sources */,
 				3714C7D91D18E9780019AE49 /* AppDelegate.swift in Sources */,
+				370E13581D5450CF0057B082 /* tableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +496,7 @@
 				3714C7FF1D18E9790019AE49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3714C8001D18E9790019AE49 /* Build configuration list for PBXNativeTarget "MemeRajTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +505,7 @@
 				3714C8021D18E9790019AE49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3714C8031D18E9790019AE49 /* Build configuration list for PBXNativeTarget "MemeRajUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +514,7 @@
 				3714C8051D18E9790019AE49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
