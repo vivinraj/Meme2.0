@@ -6,11 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Table View-->
         <scene sceneID="4iK-CT-xdC">
             <objects>
                 <navigationController id="YKk-AJ-WqZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="RxY-M6-ihj"/>
+                    <tabBarItem key="tabBarItem" title="Table View" id="RxY-M6-ihj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xN1-Z2-48L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -32,16 +32,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeTableCell" id="PQV-XA-lBL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeTableCell" textLabel="ocj-yo-ht7" style="IBUITableViewCellStyleDefault" id="PQV-XA-lBL">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PQV-XA-lBL" id="Qmj-qU-qL4">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kwi-Em-WFC">
-                                            <rect key="frame" x="0.0" y="-9" width="201" height="52.5"/>
-                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ocj-yo-ht7">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -61,13 +65,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGB-cu-U3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-469" y="-431"/>
+            <point key="canvasLocation" x="-462" y="-438"/>
         </scene>
-        <!--Item-->
+        <!--Collection View-->
         <scene sceneID="RGD-sx-MAH">
             <objects>
                 <navigationController id="t94-RS-p5Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QZm-Xf-tPy"/>
+                    <tabBarItem key="tabBarItem" title="Collection View" id="QZm-Xf-tPy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bvR-zv-OEY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -128,7 +132,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWF-sq-Dzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-491" y="-1247"/>
+            <point key="canvasLocation" x="-506" y="-1189"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SPC-6x-76K">

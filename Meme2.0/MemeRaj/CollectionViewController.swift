@@ -12,19 +12,30 @@ import UIKit
 class CollectionViewController: UICollectionViewController {
     
     var memes = (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        memes = (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+        print("Meme count in view will appear: \(memes.count)")
+        self.collectionView?.reloadData()
+    }
    
     
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        print("CollectionView Count: \(memes.count)")
         return memes.count
     }
     
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        print("Collection View Cell for index path called")
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("memeCollectionCell", forIndexPath: indexPath) as! CollectionViewCell
         let meme = memes[indexPath.item]
-        //cell.setText(meme.top, bottomString: meme.bottom)
-        let imageView = UIImageView(image: meme.image)
+        print("Meme from Collection view: \(meme)")
+      //  cell.setText(meme.top, bottomString: meme.bottom)
+        let imageView = UIImageView(image: meme.memedImage)
         cell.backgroundView = imageView
         return cell
     }
@@ -37,9 +48,5 @@ class CollectionViewController: UICollectionViewController {
         self.presentViewController(controller, animated: true, completion: nil)
         
     }
-    
-   // override func collectionView
-    
-    
     
 }
