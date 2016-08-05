@@ -12,6 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    struct Meme {
+        var text: String
+        var text2: String
+        var image: UIImage?
+        var memedImage: UIImage
+    }
+    
+    var memes = [Meme]()
+    
+    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

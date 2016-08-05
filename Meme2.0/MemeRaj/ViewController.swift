@@ -89,16 +89,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return memedImage
     }
     
-    struct Meme {
-        var text: String
-        var text2: String
-        var image: UIImage?
-        var memedImage: UIImage
-    }
+  
     
     func save() {
         //Create the meme
-        let meme = Meme( text: topLabel.text!, text2: bottomLabel.text!, image: imagePickerView.image, memedImage: generateMemedImage() )
+        let meme = AppDelegate.Meme( text: topLabel.text!, text2: bottomLabel.text!, image: imagePickerView.image, memedImage: generateMemedImage() )
+        
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        
+        appDelegate.memes.append(meme)
+        
         
         //(UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
         
