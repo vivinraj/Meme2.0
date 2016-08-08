@@ -40,6 +40,13 @@ class CollectionViewController: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let detailViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+        detailViewController.meme = memes[indexPath.row]
+        navigationController!.pushViewController(detailViewController, animated: true)
+        
+    }
+    
     
     @IBAction func addButton(sender: AnyObject) {
         

@@ -11,6 +11,7 @@ import UIKit
 
 class tableViewController: UITableViewController {
     
+    
  var memes = (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     
     override func viewWillAppear(animated: Bool) {
@@ -42,16 +43,34 @@ class tableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
+   /* override func tableView(tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.dequeueReusableCellWithIdentifier("memeTableCell")
         //let meme = memes[indexPath.row]
        // AppDelegate.memes.remove[meme]
         print("Editin")
         (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(indexPath.row)
         
+    } */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let detailViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+        detailViewController.meme = memes[indexPath.row]
+        navigationController!.pushViewController(detailViewController, animated: true)
+    }
+
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+           // deletePlanetIndexPath = indexPath
+            let meme = memes[indexPath.row]
+            print("Meme in edit: \(meme)")
+            (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+            
+        }
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    
+   /* override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         print("edit button ")
         
         if editingStyle == UITableViewCellEditingStyle.Delete {
@@ -61,7 +80,7 @@ class tableViewController: UITableViewController {
             tableView.reloadData()
         }
         
-    }
+    } */
     
 
     @IBAction func addButton(sender: AnyObject) {
