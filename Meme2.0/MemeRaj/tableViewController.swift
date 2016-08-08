@@ -42,15 +42,7 @@ class tableViewController: UITableViewController {
         cell.imageView?.image = meme.memedImage
         return cell
     }
-    
-   /* override func tableView(tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.dequeueReusableCellWithIdentifier("memeTableCell")
-        //let meme = memes[indexPath.row]
-       // AppDelegate.memes.remove[meme]
-        print("Editin")
-        (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(indexPath.row)
-        
-    } */
+
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
@@ -69,19 +61,7 @@ class tableViewController: UITableViewController {
         }
     }
     
-    
-   /* override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        print("edit button ")
-        
-        if editingStyle == UITableViewCellEditingStyle.Delete {
-            print("Delete button code executing")
-            print("index row path: \(indexPath.row)")
-            (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(indexPath.row)
-            tableView.reloadData()
-        }
-        
-    } */
-    
+
 
     @IBAction func addButton(sender: AnyObject) {
         var controller: ViewController

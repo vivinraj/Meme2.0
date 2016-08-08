@@ -13,10 +13,7 @@ import UIKit
 class MemeDetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    
-  
-    
-   // var memes = (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+
     
     var meme: AppDelegate.Meme!
     

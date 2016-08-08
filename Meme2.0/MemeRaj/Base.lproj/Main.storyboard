@@ -261,11 +261,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-B2-OIV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-B2-OIV">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GKY-B2-OIV" secondAttribute="trailing" id="BUO-di-fOc"/>
+                            <constraint firstItem="GKY-B2-OIV" firstAttribute="leading" secondItem="mfI-dF-XO6" secondAttribute="leading" id="Kre-Ze-UOS"/>
+                            <constraint firstItem="GKY-B2-OIV" firstAttribute="top" secondItem="q5K-Mk-Cd1" secondAttribute="bottom" id="XNx-cP-vi9"/>
+                            <constraint firstItem="LPb-Y1-Z1b" firstAttribute="top" secondItem="GKY-B2-OIV" secondAttribute="bottom" id="nHI-cG-JPr"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="GKY-B2-OIV" id="LLK-jX-RGN"/>

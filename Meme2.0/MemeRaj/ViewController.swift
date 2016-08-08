@@ -100,12 +100,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         appDelegate.memes.append(meme)
         print("Meme added to the list of saved memes: \(appDelegate.memes.count)")
-        
-        
-        
-        //(UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
-        
-       // (UIApplication.sharedApplication().delegate as AppDelegate).memes.append(meme)
     
     }
     
@@ -202,18 +196,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
 
         }
-      
-            
-        
-        
-        
-        
         
     }
-    
-    
-        
-    
 
     
    func textFieldDidBeginEditing(textField: UITextField) {
