@@ -13,6 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    
+    //Meme struct
+    
     struct Meme {
         var text: String
         var text2: String
