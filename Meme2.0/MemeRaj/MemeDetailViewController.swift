@@ -23,4 +23,8 @@ class MemeDetailViewController: UIViewController {
         imageView.image = meme.memedImage
     }
     
+    @IBAction func cancelButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
