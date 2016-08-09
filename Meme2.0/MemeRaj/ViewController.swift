@@ -216,6 +216,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return true;
     }
     
+    @IBAction func cancelButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    
+    }
     
     
 }
