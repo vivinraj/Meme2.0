@@ -113,6 +113,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomLabel.delegate = self
         setupTextField(topLabel, defaultText: "TOP")
         setupTextField(bottomLabel, defaultText: "BOTTOM")
+        topLabel.textAlignment = NSTextAlignment.Center
+        bottomLabel.textAlignment = NSTextAlignment.Center
+        
         
     }
     
